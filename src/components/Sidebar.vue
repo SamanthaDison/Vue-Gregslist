@@ -1,5 +1,9 @@
 <template>
-  <h6>Hello World</h6>
+  <div class="selectable">
+    <router-link :to="{ name: 'Cars' }"> Cars </router-link>
+  </div>
+  <div class="selectable">Jobs</div>
+  <div class="selectable">Houses</div>
 </template>
 
 <script>
