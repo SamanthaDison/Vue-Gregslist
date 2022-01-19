@@ -3,9 +3,10 @@
 </template>
 
 <script>
-import { onMounted } from "@vue/runtime-core";
+import { computed, onMounted } from "@vue/runtime-core";
 import { carsService } from "../services/CarsService";
 import Pop from "../utils/Pop";
+import { AppState } from "../AppState";
 export default {
   setup() {
     onMounted(async () => {
@@ -16,7 +17,9 @@ export default {
         Pop.toast("Unable to retrieve cars", "error");
       }
     });
-    return {};
+    return {
+      cars: computed(() => AppState.cars),
+    };
   },
 };
 </script>
