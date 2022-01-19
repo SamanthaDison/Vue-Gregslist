@@ -1,5 +1,16 @@
 <template>
-  <h6>Hello World</h6>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">CARS</div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-4" v-for="cData in cars" :key="cData.id">
+            <Car :car="cData" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
